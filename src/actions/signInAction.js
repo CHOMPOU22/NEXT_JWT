@@ -7,6 +7,6 @@ export const signInAction = async (formData) => {
   await signIn("credentials", {
     email: formData?.get("email"),
     password: formData?.get("password"),
-    redirectTo: "/",
+    redirectTo: "/workspace",
   });
 };
