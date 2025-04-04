@@ -4,8 +4,6 @@ import { revalidateTag } from "next/cache";
 export const getAllWorkspace = async () => {
   const headers = await headerToken();
 
-  console.log("headers", headers);
-
   if (!headers?.Authorization || headers.Authorization.includes("undefined")) {
     console.log("User not authenticated, skipping fetch.");
     return { workspaces: [], favorites: [] };
@@ -48,8 +46,6 @@ export const createWorkspace = async (formData) => {
   );
 
   const result = await response.json().catch(() => ({}));
-  console.log("Status:", response.status);
-  console.log("Response JSON:", result);
 
   if (!response.ok) {
     console.error("Error creating workspace", result);

@@ -9,7 +9,6 @@ export default function LoginPage() {
       </h1>
       <LoginComponent />
 
-      {/* copyright */}
       <p className="text-center text-light-steel-blue">
         &copy; Copyright | 2025 Monster
       </p>
